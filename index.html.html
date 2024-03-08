@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+table tr {
+  padding: 15px;
+}
+
+table th {
+  padding: 15px 0;
+  font-size: 16px;
+  /* height: 80px; */
+}
+table td {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.td-1{
+    width: 13%;
+}
+.td-2{
+    width: 5%;
+}
+.td-3{
+    width: 52%;
+}
+.td-4{
+    width: 20%;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.td-5{
+    width: 10%;
+}
+@media screen and (max-width: 991px) {
+    .td-1, .td-2, .td-3, .td-4, .td-5{
+        width: auto;
+    }
+    .td-4{
+    padding: 0;
+  }
+  table {
+    border: 0;
+    table-layout: fixed;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .empty{
+    display: flex;
+    justify-content: space-between;
+  }
+  table td {
+    padding: 5px 0;
+    display: block;
+    font-size: 14px;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+  p{
+    padding-top: 0px;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+          <tr valign="top" bgcolor="#006666">
+            <th ><strong><span style="color: #fff;">Education Type</span> </strong></th>
+            <th ><strong><span style="color: #fff;">Type Code</span> </strong></th>
+            <th> <strong><span style="color: #fff;">Education Description</span> </strong></th>
+            <th><strong><span style="color: #fff;">Proof of Completion</span> </strong></th>
+            <th><strong><span style="color: #fff;">3-Yr Maximum</span> </strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-1" data-label="Education Type">Educational program</td>
+            <td class="td-2" data-label="Type Code">1</td>
+            <td class="td-3" data-label="Education Description">	Participation in lecture, workshop, webinar, educational session, or case presentation provided by a professional healthcare association, healthcare facility or provider of services to a healthcare facility, or an industry- recognized provider of education. Participation in the same course more than once may be reported only once.</td>
+            <td class="td-4" data-label="Proof of Completion">Certificate of attendance/ certificate of completion with contact hours earned</td>
+            <td class="td-5" data-label="3-Yr Maximum">No limit</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Academic coursework</td>
+            <td class="td-2" data-label="Type Code">2</td>
+            <td class="td-3" data-label="Education Description">From an accredited college or university
+                •  One (1) semester credit = 15 contact hours
+                •  One (1) quarter credit = 10 contact hours; includes in-person and online </td>
+            <td class="td-4" data-label="Proof of Completion">Grade report or copy of transcript </td>
+            <td class="td-5" data-label="3-Yr Maximum">15 contact hours</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Self-study</td>
+            <td class="td-2" data-label="Type Code">3</td>
+            <td class="td-3" data-label="Education Description">Program provided by a professional healthcare association, healthcare facility or provider of services to a healthcare facility, or an industry-recognized provider of education. Provider must award contact hours or a similar unit of continuing education.
+            Includes audio conferences, CHES archived webinars, and online education.</td>
+            <td class="td-4" data-label="Proof of Completion">Certificate of completion with contact hours earned</td>
+            <td class="td-5" data-label="3-Yr Maximum">No limit</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Professional presentations</td>
+            <td class="td-2" data-label="Type Code">4</td>
+            <td class="td-3" data-label="Education Description">Presentation at an educational program or a meeting of a national, regional, state, or local professional association or society. Hours may be reported for the first time only of a presentation, for twice the length of the educational program, for the speaker’s portion of that presentation.</td>
+            <td class="td-4" data-label="Proof of Completion">Copy of program</td>
+            <td class="td-5" data-label="3-Yr Maximum">15 contact hours</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Academic teaching</td>
+            <td class="td-2" data-label="Type Code">5</td>
+            <td class="td-3" data-label="Education Description">Teaching at an accredited college or university (permitted only if this is not your full-time job)
+                •  One (1) semester credit = 15 contact hours
+                •  One (1) quarter credit = 10 contact hours</td>
+            <td class="td-4" data-label="Proof of Completion">Letter from academic institution</td>
+            <td class="td-5" data-label="3-Yr Maximum">15 contact hours</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Test item writing</td>
+            <td class="td-2" data-label="Type Code">6</td>
+            <td class="td-3" data-label="Education Description">Writing test items for an Examination
+                0.5 contact hours is awarded for each accepted test item.</td>
+            <td class="td-4" data-label="Proof of Completion">Letter from CHES</td>
+            <td class="td-5" data-label="3-Yr Maximum">15 contact hours</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Self-Assessment Examination</td>
+            <td class="td-2" data-label="Type Code">7</td>
+            <td class="td-3" data-label="Education Description">Completion of a Self-Assessment Examination (SAE) available through CHES earns five (5) contact hours</td>
+            <td class="td-4" data-label="Proof of Completion">Individual Mastery Report provided by CHES</td>
+            <td class="td-5" data-label="3-Yr Maximum">15 contact hours</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Authoring/Publishing</td>
+            <td class="td-2" data-label="Type Code">8</td>
+            <td class="td-3" data-label="Education Description">	Authoring a book chapter or at least two articles published in professional journals or periodicals with documented circulation that exceeds 1,000 readers earns five (5) contact hours. Publications must meet the following criteria:
+                •  Be published within the three (3)-year certification cycle for which the professional education credit is being sought
+                •  Relate to one or more content domain/task listed in the corresponding Examination content outline
+                •  Bear the author’s name, publication’s name, and date of publication
+                •  Be published outside of the certificant’s facility or place of business</td>
+            <td class="td-4" data-label="Proof of Completion">Copy of the book chapter or articles</td>
+            <td class="td-5" data-label="3-Yr Maximum">15 contact hours</td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">CHES Board of Directors or CHES Committees</td>
+            <td class="td-2" data-label="Type Code">9</td>
+            <td class="td-3" data-label="Education Description">Participation in CHES scheduled meetings or working sessions including but not limited to job analysis survey development and results review, test item development, exam key verification, or SAE review or development.
+                One (1) contact hour per hour of participation.</td>
+            <td class="td-4" data-label="Proof of Completion">Letter from CHES</td>
+            <td class="td-5" data-label="3-Yr Maximum">No limit </td>
+          </tr>
+          <tr>
+            <td class="td-1" scope="row" data-label="Education Type">Other Professional Committees</td>
+            <td class="td-2" data-label="Type Code">10</td>
+            <td class="td-3" data-label="Education Description">Participation in other Professional committee meetings or working sessions including but not limited to job analysis survey development and results review, test item development, exam key verification, or SAE review or development.
+                One (1) contact hour per hour of participation.</td>
+            <td class="td-4" class="td-4" data-label="Proof of Completion">Letter from Professional Group / Copy of minutes</td>
+            <td class="td-5" data-label="3-Yr Maximum">30 contact hours</td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+</html>
